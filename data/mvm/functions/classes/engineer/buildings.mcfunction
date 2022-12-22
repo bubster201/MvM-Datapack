@@ -1,0 +1,1 @@
+execute as @s[name="mvm_SentryGun"] run function mvm:classes/engineer/sentry

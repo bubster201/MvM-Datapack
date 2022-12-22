@@ -1,0 +1,1 @@
+playsound minecraft:block.amethyst_block.break master @a ~ ~ ~

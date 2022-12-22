@@ -1,0 +1,14 @@
+clear @s
+
+scoreboard players set @s mvm_maxClip1 6
+scoreboard players set @s mvm_maxAmmo1 32
+scoreboard players set @s mvm_class 6
+scoreboard players set @s mvm_reloadSpeed1 20
+scoreboard players set @s mvm_reloadSpeed2 100
+scoreboard players set @s mvm_ammo1 32
+scoreboard players set @s mvm_ammo2 1
+scoreboard players set @s mvm_metal 200
+
+execute as @e[type=armor_stand,name="mvm_Stickybomb"] at @s if score @s mvm_id = @p[scores={mvm_class=6}] mvm_id run function mvm:classes/demoman/sticky_explode
+
+item replace entity @s hotbar.3 with observer{mvm_buildingType:1b,mvm_buildingLevel:0b,mvm_weapon:1b}
