@@ -18,8 +18,8 @@ execute as @s[scores={mvm_reload1=2,mvm_ammo1=0..}] run function mvm:classes/ref
 execute as @s[scores={mvm_reload2=2,mvm_ammo2=0..}] run function mvm:classes/refill_ammo2
 #execute as @s[scores={mvm_reload3=2,mvm_ammo3=0..}] run function mvm:classes/refill_ammo3
 
-scoreboard players remove @s[scores={mvm_reload1=2..}] mvm_reload1 1
-scoreboard players remove @s[scores={mvm_reload2=2..}] mvm_reload2 1
+scoreboard players remove @s[scores={mvm_reload1=2..,mvm_ammo1=1..}] mvm_reload1 1
+scoreboard players remove @s[scores={mvm_reload2=2..,mvm_ammo2=1..}] mvm_reload2 1
 
 scoreboard players set @s mvm_useCrossbow 0
 scoreboard players set @s mvm_useLingeringPotion 0

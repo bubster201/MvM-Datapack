@@ -3,7 +3,7 @@ execute if block ~1 ~ ~ minecraft:green_wool run execute as @e[type=marker,name=
 
 
 scoreboard players set @e[tag=mvm_enemy,tag=mvm_health125] mvm_health 125
-tag @e[team=mvm_enemy] remove mvm_health125
+tag @e[tag=mvm_enemy] remove mvm_health125
 
 effect give @e[tag=mvm_enemy] resistance 999999 255 true
 team join mvm_enemies @e[tag=mvm_enemy]

@@ -6,6 +6,7 @@ execute as @s[scores={mvm_demo_stickies=8..}] run execute as @e[type=armor_stand
 execute as @s[scores={mvm_demo_stickies=8..}] run scoreboard players set @s mvm_demo_stickies 7
 
 scoreboard players operation @e[type=arrow,limit=1,sort=nearest,nbt={Color:22,inGround:0b}] mvm_id = @s mvm_id
+execute as @s[tag=mvm_critBoosted] run tag @e[type=arrow,limit=1,sort=nearest,nbt={Color:22,inGround:0b}] add mvm_critBoosted
 scoreboard players add @s mvm_demo_stickies 1
 
 
