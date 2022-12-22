@@ -1,5 +1,6 @@
 scoreboard players add @s mvm_distance 1
-execute as @s[scores={mvm_distance=..100}] unless entity @e[type=marker,name="mvm_Hitbox",distance=..0.5] run particle mycelium ~ ~ ~ 0 0 0 0 1 force
-execute as @s[scores={mvm_distance=..100}] unless entity @e[type=marker,name="mvm_Hitbox",distance=..0.5] positioned ^ ^ ^0.2 if block ~ ~ ~ minecraft:air run function mvm:classes/scout/scattergun_bullet
-execute as @e[type=marker,name="mvm_Hitbox",distance=..0.5] at @s run execute as @e[team=mvm_enemies,limit=1,sort=nearest] at @s if entity @s[tag=mvm_milked] run effect give @p[tag=mvm_fired] instant_health 1 0 true
-execute as @e[type=marker,name="mvm_Hitbox",distance=..0.5] at @s run execute as @e[team=mvm_enemies,limit=1,sort=nearest] at @s run function mvm:damage/damage_5
+execute as @s[scores={mvm_distance=..100}] unless entity @e[type=armor_stand,tag=mvm_building,distance=..2] positioned ^ ^ ^0.2 if block ~ ~ ~ minecraft:air run function mvm:classes/engineer/rescue_ranger_hitscan
+execute as @s[scores={mvm_distance=..100}] if entity @e[type=armor_stand,tag=mvm_building,distance=..2,name="mvm_SentryGun"] run item replace entity @s hotbar.4 with observer{mvm_buildingType:1b,mvm_buildingLevel:0b,mvm_weapon:1b}
+execute as @s[scores={mvm_distance=..100}] if entity @e[type=armor_stand,tag=mvm_building,distance=..2,name="mvm_SentryGun"] run scoreboard players remove @s mvm_metal 100
+execute as @s[scores={mvm_distance=..100}] if entity @e[type=armor_stand,tag=mvm_building,distance=..2,name="mvm_SentryGun"] run playsound minecraft:block.lava.pop master @s ~ ~ ~ 5 0.7
+kill @e[type=armor_stand,tag=mvm_building,distance=..2,name="mvm_SentryGun"]
