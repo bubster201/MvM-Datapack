@@ -6,6 +6,4 @@ scoreboard players operation @e[type=marker,name="mvm_Hitbox",distance=..4] mvm_
 execute as @e[type=marker,name="mvm_Hitbox",distance=..4] at @s run scoreboard players operation @e[team=mvm_enemies,limit=1,sort=nearest] mvm_damageDealer = @s mvm_damageDealer
 execute as @e[type=marker,name="mvm_Hitbox",distance=..4] at @s run scoreboard players set @e[team=mvm_enemies,limit=1,sort=nearest] mvm_applyDamage 90
 
-say booM!
-
 kill @s
