@@ -34,6 +34,16 @@ scoreboard objectives add mvm_damageDealer dummy
 scoreboard objectives add mvm_metalReference dummy
 scoreboard objectives add mvm_value dummy
 scoreboard objectives add mvm_money dummy
+scoreboard objectives add mvm_uberchargeScaled dummy
+scoreboard objectives add mvm_ubercharge dummy
+scoreboard objectives add mvm_healTarget dummy
+scoreboard objectives add mvm_medibeamActive dummy
+scoreboard objectives add mvm_medibeamIdDiff dummy
+scoreboard objectives add mvm_overheal dummy
+scoreboard objectives add mvm_maxOverheal dummy
+scoreboard objectives add mvm_damageDealerIdDiff dummy
+scoreboard objectives add mvm_buffBannerDamage dummy
+scoreboard objectives add mvm_damageDealt dummy
 
 scoreboard objectives add mvm_useIronAxe minecraft.used:minecraft.iron_axe
 scoreboard objectives add mvm_useCrossbow minecraft.used:minecraft.crossbow
@@ -43,6 +53,7 @@ scoreboard objectives add mvm_crouch minecraft.custom:sneak_time
 scoreboard objectives add mvm_useCarrotStick minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add mvm_useBow minecraft.used:minecraft.bow
 scoreboard objectives add mvm_useNetheriteAxe minecraft.used:minecraft.netherite_axe
+scoreboard objectives add mvm_useGoatHorn minecraft.used:minecraft.goat_horn
 
 team add mvm_enemies
 team add mvm_bomb
@@ -61,5 +72,9 @@ scoreboard players set $130 mvm_vars 130
 scoreboard players set $3 mvm_vars 3
 scoreboard players set $135 mvm_vars 135
 scoreboard players set $10000 mvm_vars 10000
+scoreboard players set $tick mvm_timer 0
+scoreboard players set $21 mvm_vars 21
+scoreboard players set $1 mvm_vars 1
+scoreboard players set $600 mvm_vars 600
 
 gamerule mobGriefing false

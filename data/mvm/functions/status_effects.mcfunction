@@ -4,4 +4,4 @@ kill @e[type=area_effect_cloud,nbt={Color:16777215}]
 
 execute as @e[team=mvm_enemies,tag=mvm_burning] at @s run function mvm:burning
 
-execute as @e[team=mvm_enemies,tag=mvm_marked] at @s run particle block skeleton_skull ~ ~3 ~ 0.2 0.2 0.2 0 1
+execute as @e[team=mvm_enemies,tag=mvm_marked] at @s run particle block iron_block ~ ~3 ~ 0.2 0.2 0.2 0 1

@@ -1,1 +1,2 @@
-execute as @s[scores={mvm_useCarrotStick=1..,mvm_ammo1=1..},nbt={SelectedItem:{tag:{slot2:1b}}}] at @s positioned ~ ~1.5 ~ run function mvm:classes/medic/medic_fire2
+execute as @s[scores={mvm_useCarrotStick=1..},nbt={SelectedItem:{tag:{mvm_slot2:1b}}}] at @s positioned ~ ~1.5 ~ run function mvm:classes/medic/medic_fire2
+scoreboard players remove @s[scores={mvm_useCarrotStick=0,mvm_medibeamActive=1..}] mvm_medibeamActive 1

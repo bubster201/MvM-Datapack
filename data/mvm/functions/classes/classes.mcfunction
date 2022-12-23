@@ -20,6 +20,8 @@ execute as @s[scores={mvm_reload3=2}] run function mvm:classes/refill_ammo3
 
 #TODO: hard-code reload exception(s) for throwables (mad milk)
 
+execute if score $tick mvm_timer = $2 mvm_vars if score @s mvm_overheal >= $1 mvm_vars run scoreboard players remove @s mvm_overheal 1
+
 scoreboard players remove @s[scores={mvm_reload1=2..,mvm_ammo1=1..}] mvm_reload1 1
 scoreboard players remove @s[scores={mvm_reload2=2..,mvm_ammo2=1..,mvm_class=2..9}] mvm_reload2 1
 scoreboard players remove @s[scores={mvm_reload2=2..,mvm_ammo2=0..,mvm_class=1}] mvm_reload2 1
@@ -32,3 +34,4 @@ scoreboard players set @s mvm_useCarrotStick 0
 scoreboard players set @s mvm_useBow 0
 scoreboard players set @s mvm_useIronAxe 0
 scoreboard players set @s mvm_useNetheriteAxe 0
+scoreboard players set @s mvm_useGoatHorn 0

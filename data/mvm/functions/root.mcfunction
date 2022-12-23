@@ -32,6 +32,9 @@ execute as @a[tag=mvm_critBoosted] run item modify entity @s weapon.mainhand mvm
 execute as @a[tag=!mvm_critBoosted] run item modify entity @s weapon.mainhand mvm:remove_crit
 
 
+execute if score $tick mvm_timer >= $21 mvm_vars run scoreboard players set $tick mvm_timer 0
+scoreboard players add $tick mvm_timer 1
+
 tag @e[tag=mvm_damageCrit] remove mvm_damageCrit
 
 kill @e[type=marker,name="mvm_Hitbox"]
