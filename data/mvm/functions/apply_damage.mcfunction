@@ -2,6 +2,12 @@
 execute as @s[type=!#mvm:undead] run effect give @s instant_damage 1 0 true
 execute as @s[type=#mvm:undead] run effect give @s instant_health 1 0 true
 
+scoreboard players operation @s[tag=mvm_marked,tag=!mvm_damageCrit] mvm_applyDamage *= $135 mvm_vars
+scoreboard players operation @s[tag=mvm_marked,tag=!mvm_damageCrit] mvm_applyDamage /= $100 mvm_vars
+
+execute as @s[tag=mvm_marked,tag=!mvm_damageCrit] at @s run playsound minecraft:block.anvil.land master @a ~ ~ ~ 1 1.2
+
+
 scoreboard players operation @s[tag=mvm_damageCrit] mvm_applyDamage *= $3 mvm_vars
 execute as @s[tag=mvm_damageCrit] at @s run particle happy_villager ~ ~2.2 ~ 0.3 0 0.3 0 20
 execute as @s[tag=mvm_damageCrit] at @s run playsound minecraft:block.anvil.land master @a ~ ~ ~ 1 1.6

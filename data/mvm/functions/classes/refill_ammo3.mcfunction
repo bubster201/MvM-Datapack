@@ -1,0 +1,1 @@
+execute as @s[scores={mvm_class=1}] run item replace entity @s hotbar.2 with minecraft:netherite_axe{mvm_slot3:1b,mvm_weapon:1b}

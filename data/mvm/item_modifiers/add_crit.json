@@ -2,8 +2,7 @@
     {
       "function": "minecraft:set_enchantments",
       "enchantments": {
-        "minecraft:feather_falling": 1,
-        "minecraft:binding_curse": 1
+        "minecraft:feather_falling": 1
       }
     }
 ]

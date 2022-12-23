@@ -19,7 +19,9 @@ execute as @a[team=mvm_players] at @s run function mvm:classes/classes
 function mvm:status_effects
 
 execute as @e[team=mvm_enemies,scores={mvm_applyDamage=1..}] at @s run function mvm:apply_damage
-execute as @e[team=mvm_enemies,scores={mvm_health=-1000000..0}] run function mvm:keel_over
+execute as @e[team=mvm_enemies,scores={mvm_health=-1000000..0}] at @s run function mvm:keel_over
+
+execute as @e[type=item,name="mvm_Money",nbt={Item:{Count:1b}}] at @s run function mvm:collectable_money
 
 #Condense this in the future
 kill @e[type=armor_stand,name="mvm_Stickybomb",scores={mvm_sticky_id=0}]

@@ -18,6 +18,7 @@ scoreboard objectives add mvm_reloadSpeed3 dummy
 scoreboard objectives add mvm_maxAmmo1 dummy
 scoreboard objectives add mvm_maxAmmo2 dummy
 scoreboard objectives add mvm_maxAmmo3 dummy
+
 scoreboard objectives add mvm_id dummy
 scoreboard objectives add mvm_demo_stickies dummy
 scoreboard objectives add mvm_sticky_id dummy
@@ -31,6 +32,8 @@ scoreboard objectives add mvm_constructTime dummy
 scoreboard objectives add mvm_applyDamage dummy
 scoreboard objectives add mvm_damageDealer dummy
 scoreboard objectives add mvm_metalReference dummy
+scoreboard objectives add mvm_value dummy
+scoreboard objectives add mvm_money dummy
 
 scoreboard objectives add mvm_useIronAxe minecraft.used:minecraft.iron_axe
 scoreboard objectives add mvm_useCrossbow minecraft.used:minecraft.crossbow
@@ -39,6 +42,7 @@ scoreboard objectives add mvm_hit minecraft.custom:damage_dealt
 scoreboard objectives add mvm_crouch minecraft.custom:sneak_time
 scoreboard objectives add mvm_useCarrotStick minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add mvm_useBow minecraft.used:minecraft.bow
+scoreboard objectives add mvm_useNetheriteAxe minecraft.used:minecraft.netherite_axe
 
 team add mvm_enemies
 team add mvm_bomb
@@ -55,5 +59,7 @@ scoreboard players set $27 mvm_vars 27
 scoreboard players set $100 mvm_vars 100
 scoreboard players set $130 mvm_vars 130
 scoreboard players set $3 mvm_vars 3
+scoreboard players set $135 mvm_vars 135
+scoreboard players set $10000 mvm_vars 10000
 
 gamerule mobGriefing false
