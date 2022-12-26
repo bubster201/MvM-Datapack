@@ -1,4 +1,4 @@
-execute as @s[nbt={Item:{tag:{mvm_buildingLevel:0b}}}] run execute as @p[scores={mvm_class=6}] at @s run summon armor_stand ~ ~-1 ~ {CustomName:'"mvm_SentryGun"',Tags:[mvm_level1,mvm_construct,mvm_building],Invulnerable:0b,NoGravity:1b,Small:1b,ArmorItems:[{},{},{},{id:"minecraft:observer",Count:1b}],Attributes:[{Name:"minecraft:generic.max_health",Base: 200000.0d}]}
+execute as @s[nbt={Item:{tag:{mvm_buildingLevel:0b}}}] run execute as @p[scores={mvm_class=6}] at @s run summon armor_stand ~ ~-1 ~ {CustomName:'"mvm_SentryGun"',Tags:[mvm_level1,mvm_construct,mvm_building],Invulnerable:1b,NoGravity:1b,Small:1b,ArmorItems:[{},{},{},{id:"minecraft:observer",Count:1b}],Attributes:[{Name:"minecraft:generic.max_health",Base: 200000.0d}],Health:2000.0f}
 scoreboard players set @e[type=armor_stand,name="mvm_SentryGun",tag=mvm_construct,limit=1,sort=nearest] mvm_constructTime 0 
 scoreboard players set @e[type=armor_stand,name="mvm_SentryGun",tag=mvm_construct,limit=1,sort=nearest] mvm_timer 0
 scoreboard players set @e[type=armor_stand,name="mvm_SentryGun",tag=mvm_construct,limit=1,sort=nearest] mvm_ammo1 200
