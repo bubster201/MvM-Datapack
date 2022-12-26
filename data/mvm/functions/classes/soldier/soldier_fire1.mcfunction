@@ -3,6 +3,7 @@ tag @s add mvm_fired
 
 data merge entity @e[type=firework_rocket,limit=1,sort=nearest] {CustomName:'"mvm_SoldierRocket"',LifeTime:40}
 scoreboard players operation @e[type=firework_rocket,limit=1,sort=nearest] mvm_id = @s mvm_id
+execute as @s[tag=mvm_buffed] run tag @e[type=firework_rocket,limit=1,sort=nearest] add mvm_buffed
 execute as @s[tag=mvm_critBoosted] run tag @e[type=firework_rocket,limit=1,sort=nearest] add mvm_critBoosted
 execute as @e[type=firework_rocket,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ facing entity @p[scores={class=2}] eyes
 
