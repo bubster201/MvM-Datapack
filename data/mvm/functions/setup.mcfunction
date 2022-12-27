@@ -48,6 +48,8 @@ scoreboard objectives add mvm_critBuffer dummy
 scoreboard objectives add mvm_buildingIdDiff dummy
 scoreboard objectives add mvm_ammoReference dummy
 scoreboard objectives add mvm_maxMetal dummy
+scoreboard objectives add mvm_playerDamage dummy
+scoreboard objectives add mvm_playerDamageType dummy
 
 scoreboard objectives add mvm_useIronAxe minecraft.used:minecraft.iron_axe
 scoreboard objectives add mvm_useCrossbow minecraft.used:minecraft.crossbow
@@ -87,6 +89,8 @@ scoreboard players set $15 mvm_vars 15
 scoreboard players set $20 mvm_vars 20
 scoreboard players set $40 mvm_vars 40
 scoreboard players set $120 mvm_vars 120
+scoreboard players set $25 mvm_vars 25
+scoreboard players set $200 mvm_vars 200
 #scoreboard players set $80 mvm_vars 80
 
 gamerule mobGriefing false

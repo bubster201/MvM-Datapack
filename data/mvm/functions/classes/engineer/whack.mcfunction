@@ -22,3 +22,12 @@ execute as @e[type=armor_stand,tag=mvm_building,limit=1,sort=nearest,distance=..
 
 execute if score @s[scores={mvm_metalReference=1..}] mvm_metalReference < @e[type=armor_stand,tag=mvm_building,name="mvm_SentryGun",limit=1,sort=nearest,distance=..2] mvm_metalReference if score @e[type=armor_stand,tag=mvm_building,name="mvm_SentryGun",limit=1,sort=nearest,distance=..2] mvm_ammo1 < @e[type=armor_stand,tag=mvm_building,name="mvm_SentryGun",limit=1,sort=nearest,distance=..2] mvm_maxAmmo1 run function mvm:classes/engineer/whacked_apply_ammo_part
 execute if score @s mvm_metalReference >= @e[type=armor_stand,tag=mvm_building,limit=1,name="mvm_SentryGun",sort=nearest,distance=..2] mvm_metalReference if score @e[type=armor_stand,tag=mvm_building,name="mvm_SentryGun",limit=1,sort=nearest,distance=..2] mvm_ammo1 < @e[type=armor_stand,tag=mvm_building,name="mvm_SentryGun",limit=1,sort=nearest,distance=..2] mvm_maxAmmo1 run function mvm:classes/engineer/whacked_apply_ammo_full
+
+#Upgrading
+execute as @s[scores={mvm_metal=1..}] at @s run execute as @e[type=armor_stand,tag=mvm_building,limit=1,sort=nearest,distance=..2,tag=mvm_level3] run playsound minecraft:block.note_block.cow_bell master @a ~ ~ ~ 5 2
+execute as @s[scores={mvm_metal=1..}] at @s run execute as @e[type=armor_stand,tag=mvm_building,limit=1,sort=nearest,distance=..2,tag=!mvm_level3] run playsound minecraft:block.amethyst_block.break master @a ~ ~ ~ 5 0.5
+
+execute as @e[type=armor_stand,tag=mvm_building,limit=1,sort=nearest,distance=..2,tag=!mvm_level3] run function mvm:classes/engineer/whacked_get_metal
+
+execute if score @s[scores={mvm_metalReference=1..}] mvm_metalReference < @e[type=armor_stand,tag=mvm_building,limit=1,sort=nearest,distance=..2,tag=!mvm_level3] mvm_metalReference if score @e[type=armor_stand,tag=mvm_building,limit=1,sort=nearest,distance=..2,tag=!mvm_level3] mvm_metal < $200 mvm_vars run function mvm:classes/engineer/whacked_apply_metal_part
+execute if score @s mvm_metalReference >= @e[type=armor_stand,tag=mvm_building,limit=1,sort=nearest,distance=..2,tag=!mvm_level3] mvm_metalReference if score @e[type=armor_stand,tag=mvm_building,limit=1,sort=nearest,distance=..2,tag=!mvm_level3] mvm_metal < $200 mvm_vars run function mvm:classes/engineer/whacked_apply_metal_full

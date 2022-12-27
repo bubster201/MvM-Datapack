@@ -15,4 +15,6 @@ execute as @e[type=armor_stand,name="mvm_Stickybomb"] at @s if score @s mvm_id =
 item replace entity @s hotbar.3 with observer{mvm_buildingType:1b,mvm_buildingLevel:0b,mvm_weapon:1b}
 item replace entity @s hotbar.4 with furnace{mvm_buildingType:2b,mvm_buildingLevel:0b,mvm_weapon:1b}
 item replace entity @s hotbar.2 with iron_axe{mvm_slot3:1b,mvm_weapon:1b}
+item replace entity @s hotbar.1 with carrot_on_a_stick{mvm_slot2:1b,mvm_weapon:1b}
 item replace entity @s hotbar.0 with crossbow{display:{Name:'{"text":"Rescue Ranger"}'},ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:33}}],Charged:1b,mvm_slot1:1b,mvm_weapon:1b}
+item replace entity @s hotbar.8 with structure_void{mvm_weapon:1b,mvm_redeploy:1b,display:{Name:'"Redeploy Building"'}}
