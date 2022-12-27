@@ -1,0 +1,1 @@
+execute as @s[name="Bat Scout"] run function mvm:enemies/bat_scout/bat_scout

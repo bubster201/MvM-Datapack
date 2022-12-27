@@ -11,6 +11,7 @@ execute if score $tick mvm_timer = $10 mvm_vars run scoreboard players remove @s
 execute if score $tick mvm_timer = $15 mvm_vars run scoreboard players remove @s[scores={mvm_ubercharge=1..},tag=mvm_ubercharge] mvm_ubercharge 3
 execute if score $tick mvm_timer = $20 mvm_vars run scoreboard players remove @s[scores={mvm_ubercharge=1..},tag=mvm_ubercharge] mvm_ubercharge 3
 
-execute as @s[scores={mvm_ubercharge=0},tag=mvm_ubercharge] at @s run playsound entity.pillager.death master @a ~ ~ ~ 10 1
+execute as @s[scores={mvm_ubercharge=0},tag=mvm_ubercharge] at @s run playsound block.beacon.deactivate master @a ~ ~ ~ 5 2
+execute as @s[scores={mvm_ubercharge=0},tag=mvm_ubercharge] at @s run playsound minecraft:entity.shulker_bullet.hurt master @a ~ ~ ~ 5 0.5
 tag @s[scores={mvm_ubercharge=0}] remove mvm_ubercharge
 #tag @s[scores={mvm_ubercharge=0}] remove mvm_critBoosted

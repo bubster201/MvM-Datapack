@@ -1,6 +1,12 @@
 kill @e[type=arrow,nbt={Color:11}]
 scoreboard players set @s mvm_distance 0
 
+execute as @s run summon marker ~ ~0.3 ~ {CustomName:'"mvm_PlayerHitbox"',NoGravity:1b}
+execute as @s run summon marker ~ ~0.9 ~ {CustomName:'"mvm_PlayerHitbox"',NoGravity:1b}
+execute as @s run summon marker ~ ~1.5 ~ {CustomName:'"mvm_PlayerHitbox"',NoGravity:1b}
+execute as @s run summon marker ~ ~1.7 ~ {CustomName:'"mvm_PlayerHitbox"',NoGravity:1b,Tags:[mvm_pHeadHitbox]}
+execute as @s run summon marker ^ ^1.1 ^-0.4 {CustomName:'"mvm_PlayerHitbox"',NoGravity:1b,Tags:[mvm_pBackHitbox]}
+
 execute as @s[nbt={SelectedItem:{tag:{mvm_slot1:1b}}}] run title @s actionbar [{"text":"Ammo: ","color":"red"},{"score":{"name":"@s","objective":"mvm_ammo1"},"color":"yellow"}]
 execute as @s[nbt={SelectedItem:{tag:{mvm_slot2:1b}}}] run title @s actionbar [{"text":"Ammo: ","color":"red"},{"score":{"name":"@s","objective":"mvm_ammo2"},"color":"yellow"}]
 

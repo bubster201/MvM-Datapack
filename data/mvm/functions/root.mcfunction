@@ -14,6 +14,7 @@ function mvm:read_wave
 execute if score $waveActive mvm_vars matches 1 unless entity @e[team=mvm_enemies] run function mvm:next_wave
 
 execute as @a[team=mvm_players] at @s run function mvm:classes/classes
+execute as @e[team=mvm_enemies] at @s run function mvm:enemies/enemies
 
 execute as @e[type=item,nbt={Item:{tag:{mvm_weapon:1b}}}] run function mvm:return_item
 
@@ -21,6 +22,10 @@ function mvm:status_effects
 
 execute as @e[team=mvm_enemies,scores={mvm_applyDamage=1..}] at @s run function mvm:apply_damage
 execute as @e[team=mvm_enemies,scores={mvm_health=-1000000..0}] at @s run function mvm:keel_over
+
+execute as @e[team=mvm_players,scores={mvm_playerDamage=1..}] at @s run function mvm:player_damage
+kill @a[team=mvm_players,scores={mvm_health=-1000000..0}]
+execute as @a[team=mvm_players,scores={mvm_health=-1000000..0}] run scoreboard players operation @s mvm_health = @s mvm_maxHealth
 
 execute as @e[type=item,name="mvm_Money",nbt={Item:{Count:1b}}] at @s run function mvm:collectable_money
 #execute if score $waveActive mvm_vars < $1 mvm_vars run scoreboard players operation @a mvm_money += $waveMoney mvm_money
@@ -46,4 +51,6 @@ scoreboard players remove @a[scores={mvm_critBuffer=1..}] mvm_critBuffer 1
 tag @a[team=mvm_players] remove mvm_buffed
 tag @a[team=mvm_players,scores={mvm_critBuffer=0}] remove mvm_critBoosted
 tag @a remove mvm_kritz
+
 kill @e[type=marker,name="mvm_Hitbox"]
+kill @e[type=marker,name="mvm_PlayerHitbox"]

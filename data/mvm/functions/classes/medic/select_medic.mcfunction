@@ -9,3 +9,4 @@ execute as @e[type=armor_stand,name="mvm_Stickybomb"] at @s if score @s mvm_id =
 
 item replace entity @s hotbar.0 with crossbow{display:{Name:'{"text":"Crusader\'s Crossbow"}'},ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:13107207}}],Charged:1b,mvm_slot1:1b,mvm_weapon:1b}
 give @s carrot_on_a_stick{mvm_slot2:1b,mvm_weapon:1b,display:{Name:'"The Kritzkreig"'}}
+item replace entity @s hotbar.2 with iron_sword{mvm_weapon:1b,mvm_slot3:1b}
