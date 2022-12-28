@@ -1,6 +1,6 @@
 summon armor_stand ~ ~-0.7 ~ {CustomName:'"mvm_Stickybomb"',Invisible:1b,Small:1b,ArmorItems:[{},{},{},{id:"minecraft:red_concrete",Count:1b}],NoGravity:0b,Silent:1b}
 scoreboard players add @e[type=armor_stand,name="mvm_Stickybomb"] mvm_sticky_id 0
-scoreboard players operation @e[type=armor_stand,name="mvm_Stickybomb",limit=1,sort=nearest] mvm_sticky_id > @e[type=armor_stand,name="mvm_Stickybomb"] mvm_sticky_id
+scoreboard players operation @e[type=armor_stand,name="mvm_Stickybomb",limit=1,sort=nearest] mvm_sticky_id > @e[type=armor_stand,name="mvm_Stickybomb",scores={mvm_stickyIdDiff=0}] mvm_sticky_id
 scoreboard players operation @e[type=armor_stand,name="mvm_Stickybomb",limit=1,sort=nearest] mvm_id = @p[scores={mvm_class=4}] mvm_id
 execute as @s[tag=mvm_critBoosted] run tag @e[type=armor_stand,name="mvm_Stickybomb",limit=1,sort=nearest] add mvm_critBoosted
 scoreboard players add @e[type=armor_stand,name="mvm_Stickybomb",limit=1,sort=nearest] mvm_sticky_id 1

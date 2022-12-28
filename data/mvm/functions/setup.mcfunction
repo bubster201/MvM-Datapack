@@ -50,6 +50,8 @@ scoreboard objectives add mvm_ammoReference dummy
 scoreboard objectives add mvm_maxMetal dummy
 scoreboard objectives add mvm_playerDamage dummy
 scoreboard objectives add mvm_playerDamageType dummy
+scoreboard objectives add mvm_enemyId dummy
+scoreboard objectives add mvm_enemyIdDiff dummy
 
 scoreboard objectives add mvm_useIronAxe minecraft.used:minecraft.iron_axe
 scoreboard objectives add mvm_useCrossbow minecraft.used:minecraft.crossbow
