@@ -13,8 +13,9 @@ execute as @e[type=endermite,name="mvm_createNode"] at @s run function mvm:creat
 execute as @e[type=marker,name="mvm_Node"] at @s if score @s mvm_map = $currentMap mvm_map run function mvm:active_node
 execute as @e[type=armor_stand,name="mvm_Bomb"] at @s unless entity @e[tag=mvm_bombCarrier] run function mvm:pull_carrier
 
-execute if score $waveActive mvm_vars matches 1 unless entity @e[team=mvm_enemies] run function mvm:next_wave
+execute as @e[type=marker,name="mvm_WaveFeed"] at @s run function mvm:map_variables
 
+execute at @e[team=mvm_enemies,tag=mvm_giant] run tp @e[type=slime,name="mvm_BoundingBox",scores={mvm_enemyIdDiff=0}] ~ ~-1 ~
 execute as @a[team=mvm_players] at @s run function mvm:classes/classes
 execute as @e[team=mvm_enemies] at @s run function mvm:enemies/enemies
 
@@ -32,7 +33,7 @@ execute as @a[team=mvm_players,scores={mvm_health=-1000000..0}] run scoreboard p
 
 execute as @e[type=item,name="mvm_Money",nbt={Item:{Count:1b}}] at @s run function mvm:collectable_money
 #execute if score $waveActive mvm_vars < $1 mvm_vars run scoreboard players operation @a mvm_money += $waveMoney mvm_money
-execute if score $waveActive mvm_vars < $1 mvm_vars run scoreboard players set $waveMoney mvm_money 0
+#execute if score $waveActive mvm_vars < $1 mvm_vars run scoreboard players set $waveMoney mvm_money 0
 #Condense this in the future
 kill @e[type=armor_stand,name="mvm_Stickybomb",scores={mvm_sticky_id=0}]
 kill @e[type=armor_stand,name="mvm_Stickybomb",scores={mvm_sticky_id=9..}]
@@ -55,6 +56,7 @@ tag @a[team=mvm_players] remove mvm_buffed
 tag @a[team=mvm_players,scores={mvm_critBuffer=0}] remove mvm_critBoosted
 tag @a remove mvm_kritz
 
+execute as @e[type=marker,name="mvm_Hitbox"] at @s run function mvm:enemies/move_models
 
 
 kill @e[type=marker,name="mvm_PlayerHitbox"]

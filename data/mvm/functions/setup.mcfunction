@@ -52,6 +52,11 @@ scoreboard objectives add mvm_playerDamage dummy
 scoreboard objectives add mvm_playerDamageType dummy
 scoreboard objectives add mvm_enemyId dummy
 scoreboard objectives add mvm_enemyIdDiff dummy
+scoreboard objectives add mvm_hitboxId dummy
+scoreboard objectives add mvm_hitboxIdDiff dummy
+scoreboard objectives add mvm_mapDiff dummy
+scoreboard objectives add mvm_maxEnemies dummy
+scoreboard objectives add mvm_totalEnemies dummy
 
 scoreboard objectives add mvm_useIronAxe minecraft.used:minecraft.iron_axe
 scoreboard objectives add mvm_useCrossbow minecraft.used:minecraft.crossbow
@@ -96,3 +101,6 @@ scoreboard players set $200 mvm_vars 200
 #scoreboard players set $80 mvm_vars 80
 
 gamerule mobGriefing false
+
+bossbar add mvm_wavebar [{"text":"Wave "}]
+bossbar set minecraft:mvm_wavebar color blue

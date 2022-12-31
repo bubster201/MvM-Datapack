@@ -1,2 +1,2 @@
 execute if entity @e[team=mvm_players,distance=..3] if score $tick mvm_timer matches 3 run scoreboard players set @s mvm_distance 0
-execute if entity @e[team=mvm_players,distance=..3] if score $tick mvm_timer matches 3 positioned ~ ~1.5 ~ run function mvm:enemies/bat_scout/bat_scout_tracer
+execute if entity @e[team=mvm_players,distance=..3] if score $tick mvm_timer matches 3 positioned ~ ~ ~ run function mvm:enemies/bat_scout/bat_scout_tracer
